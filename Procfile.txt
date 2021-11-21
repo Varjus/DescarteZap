@@ -1,3 +1,5 @@
-web: gunicorn wsgi:descartezap
+gunicorn = gunicorn -w 3 test:descartezap
+gaffer start
+gaffer load
 
 

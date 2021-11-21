@@ -1,4 +1,4 @@
 release: python3 manage.py migrate
-web: gunicorn descartezap.descartezap.wsgi --log-file -
+web: gunicorn wsgi.descartezap.descartezap --log-file -
 heroku ps:scale web=1
 

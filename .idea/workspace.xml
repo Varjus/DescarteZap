@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="932337e1-5f12-44b7-9b30-37e597261c34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/descartezap/Procfile.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/descartezap/requirements.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/descartezap/runtime.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/descartezap/settings/base.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/descartezap/settings/heroku.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/descartezap/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/descartezap/urls.py" afterDir="false" />

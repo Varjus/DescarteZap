@@ -1,0 +1,1 @@
+web: gunicorn descartezap.wsgi --log-file -

@@ -5,7 +5,7 @@
       <change afterPath="$PROJECT_DIR$/descartezap/requirements.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/descartezap/runtime.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/descartezap/settings/base.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/descartezap/settings/heroku.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/descartezap/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/descartezap/urls.py" afterDir="false" />

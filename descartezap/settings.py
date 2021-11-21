@@ -57,7 +57,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'descartezap.descartezap.urls'
+ROOT_URLCONF = 'descartezap.urls'
 
 TEMPLATES = [
     {

@@ -23,6 +23,5 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('paginas.urls', namespace='paginas')),
     path('', include('cadastros.urls', namespace='cadastros')),
-    path('', include('descartezap.urls')),
 
 ]

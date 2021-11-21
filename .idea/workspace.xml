@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="932337e1-5f12-44b7-9b30-37e597261c34" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/descartezap/Procfile.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/descartezap/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/descartezap/runtime.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/descartezap/settings/base.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/descartezap/settings/heroku.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/descartezap/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/descartezap/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/descartezap/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/descartezap/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,11 +47,12 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/descartezap" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\varju\descartezap\descartezap" />
       <recent name="C:\Users\varju\Descartezapp\staticfiles\css" />
       <recent name="C:\Users\varju\Descartezapp\paginas\static\css" />
       <recent name="C:\Users\varju\Descartezapp\collectstatic" />

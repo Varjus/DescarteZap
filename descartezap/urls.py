@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from descartezap.descartezap import urls as descartezap_urls
 import os
 
 urlpatterns = [
@@ -23,5 +23,6 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('paginas.urls', namespace='paginas')),
     path('', include('cadastros.urls', namespace='cadastros')),
+    path('', include('descartezap_urls')),
 
 ]

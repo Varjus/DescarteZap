@@ -7,7 +7,6 @@ from django.views.generic import TemplateView
 from django.http import HttpResponse
 from .forms import UsuarioForm
 from django.shortcuts import get_object_or_404
-
 from django.core.exceptions import ValidationError
 
 

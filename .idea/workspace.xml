@@ -4,6 +4,7 @@
     <list default="true" id="932337e1-5f12-44b7-9b30-37e597261c34" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/descartezap/requirements.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/descartezap/runtime.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/descartezap/settings/base.py" beforeDir="false" />

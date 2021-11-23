@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
-from .models import Doadores
+
 
 class UsuarioForm(UserCreationForm):
     email = forms.EmailField(max_length=100)
@@ -12,10 +12,8 @@ class UsuarioForm(UserCreationForm):
         fields = ['username', 'email', 'password1', 'password2']
 
     def clean_email(self):
-        e = self.cleaned_data['email']
-        if User.objects.filter(email=e).exists():
-            raise ValidationError("O email {} já está em uso.".format(e))
+        email = self.cleaned_data['email']
+        if User.objects.filter(email=email).exists():
+            raise ValidationError("O email {} já está em uso.".format(email))
 
-        return e
-
-
+        return email

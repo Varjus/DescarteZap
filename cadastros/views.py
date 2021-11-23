@@ -11,7 +11,7 @@ from django.core.exceptions import ValidationError
 
 
 def formdoar(request):
-    urldoar = reverse('index')
+    urldoar = reverse('paginas:index.html')
 
 
 class FormCadastro(TemplateView):
@@ -24,24 +24,17 @@ class DoadoresCreate(CreateView):
     success_url = reverse_lazy('paginas:home')
 
     def form_valid(self, form):
-
         grupo = get_object_or_404(Group, name='Doadores')
-
         url = super().form_valid(form)
-
         self.object.groups.add(grupo)
         self.object.save()
-
         Doadores.objects.create(username=self.object)
-
         return url
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
-
         context['titulo'] = "Registro de Novo Usuário"
         context['Botao'] = "Cadastrar"
-
         return context
 
 class DoacaoCreate(CreateView):
@@ -50,19 +43,10 @@ class DoacaoCreate(CreateView):
     template_name = 'cadastrar/doacao.html'
     success_url = reverse_lazy('paginas:home')
 
-
-
     def form_valid(self, form):
         form.instance.username = self.request.user
-
         url = super().form_valid(form)
-
-
-
         return url
-
-
-
 
 #################### UPDATE ########################
 
@@ -98,11 +82,8 @@ class DoadoresList(ListView):
 
 class DoacaoList(ListView, Doacao):
     model = Doacao
-
     template_name = 'cadastrar/listas/doacao.html'
 
     def get_queryset(self):
         self.object_list = Doacao.objects.filter(username=self.request.user)
         return self.object_list
-
-

@@ -11,20 +11,19 @@ from django.core.exceptions import ValidationError
 
 
 class DoadoresCreate(CreateView):
-    template_name = 'cadastrar/doador.html'
+    template_name = 'doador.html'
     form_class = UsuarioForm
     success_url = reverse_lazy('paginas:home')
 
     def form_valid(self, form):
-
-        grupo = get_object_or_404(Group, name='clientes')
+        # grupo = get_object_or_404(Group, name='clientes')
 
         url = super().form_valid(form)
 
-        self.object.groups.add(grupo)
-        self.object.save()
+        # self.object.groups.add(grupo)
+        # self.object.save()
 
-        Doadores.objects.create(usarname=self.object)
+        # Doadores.objects.create(usarname=self.object)
 
         return url
 
@@ -35,10 +34,23 @@ class DoadoresCreate(CreateView):
         return context
 
 
+class AtualizacaoDoacaoCreate(CreateView):
+    model = Doadores
+    fields = ['nome', 'sobrenome', 'dataNascimento', 'endereco', 'numero', 'bairro', 'cidade', 'telefonefixo',
+              'celular']
+    template_name = 'form.html'
+    success_url = reverse_lazy('paginas:home')
+
+    def form_valid(self, form):
+        form.instance.username = self.request.user
+        url = super().form_valid(form)
+        return url
+
+
 class DoacaoCreate(CreateView):
     model = Doacao
     fields = ['quantidade', 'descricao']
-    template_name = 'cadastrar /doacao.html'
+    template_name = 'doacao.html'
     success_url = reverse_lazy('paginas:home')
 
     def form_valid(self, form):
@@ -50,7 +62,7 @@ class DoacaoCreate(CreateView):
 #################### UPDATE ########################
 
 class DoadorUpdate(UpdateView):
-    template_name = 'cadastrar/doador.html'
+    template_name = 'form.html'
     model = Doadores
     fields = ['nome', 'sobrenome', 'dataNascimento', 'endereco', 'numero', 'bairro', 'cidade', 'telefonefixo',
               'celular']
@@ -73,7 +85,7 @@ class DoadorUpdate(UpdateView):
 
 class DoadoresList(ListView):
     model = Doadores
-    template_name = 'cadastrar/listas/doadores.html'
+    template_name = 'listdoador.html'
 
     def get_queryset(self):
         self.object_list = Doadores.objects.filter(username=self.request.user)
@@ -82,7 +94,7 @@ class DoadoresList(ListView):
 
 class DoacaoList(ListView, Doacao):
     model = Doacao
-    template_name = 'cadastrar/listas/doacao.html'
+    template_name = 'listdoacao.html'
 
     def get_queryset(self):
         self.object_list = Doacao.objects.filter(username=self.request.user)

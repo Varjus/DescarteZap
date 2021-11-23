@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<h3>Lista de Doações</h3>
+
+<hr>
+<div>
+    <table class="table table-striped">
+        <tr>
+            <th> ID </th>
+            <th>QUANTIDADE (l)</th>
+            <th>DESCRIÇÃO</th>
+            <th>USUARIO</th>
+        </tr>
+
+        {% for doacao in object_list %}
+
+        <tr>
+            <td>{{ doacao.id }}</td>
+            <td>{{ doacao.quantidade }}</td>
+            <td>{{ doacao.descricao }}</td>
+            <td>{{ doacao.username }}</td>
+
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3">Não foram encontrados dados nesta pesquisa</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}s %}

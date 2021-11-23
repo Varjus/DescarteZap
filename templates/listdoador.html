@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<h3>Endereço do Doador</h3>
+
+<hr>
+
+<div class="table responsive">
+
+    <table class="table table-striped">
+        <tr>
+            <th>ID</th>
+            <th>NOME</th>
+            <th>ENDEREÇO</th>
+            <th>NÚMERO</th>
+            <th>COMPLEMENTO</th>
+            <th>BAIRRO</th>
+            <th>CIDADE</th>
+            <th>TEL (FIXO)</th>
+            <th>CELULAR</th>
+            <th>USUARIO</th>
+        </tr>
+
+        {% for doadores in object_list %}
+
+        <tr>
+            <td>{{ doadores.id }}</td>
+            <td>{{ doadores.nome }}</td>
+            <td>{{ doadores.endereco }}</td>
+            <td>{{ doadores.numero }}</td>
+            <td>{{ doadores.complemento }}</td>
+            <td>{{ doadores.bairro }}</td>
+            <td>{{ doadores.cidade }}</td>
+            <td>{{ doadores.telefonefixo }}</td>
+            <td>{{ doadores.celular }}</td>
+            <td>{{ doadores.username }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3">Não foram encontrados dados nesta pesquisa</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+</div>
+
+{% endblock %}s %}

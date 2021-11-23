@@ -6,14 +6,20 @@ from django.core.exceptions import ValidationError
 
 class UsuarioForm(UserCreationForm):
     email = forms.EmailField(max_length=100)
+    name = forms.EmailField(max_length=100)
 
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
 
-    def clean_email(self):
-        email = self.cleaned_data['email']
-        if User.objects.filter(email=email).exists():
-            raise ValidationError("O email {} já está em uso.".format(email))
+    def clean_nome(self):
+        pessoa = self.cleaned_data['usarname']
+        if User.objects.filter(usarname=pessoa).exists():
+            raise ValidationError("Nome de usuário {} já está em uso.".format(pessoa))
+        return pessoa
 
-        return email
+    def clean_email(self):
+        e = self.cleaned_data['email']
+        if User.objects.filter(email=e).exists():
+            raise ValidationError("O email {} já está em uso.".format(e))
+        return e

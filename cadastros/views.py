@@ -10,25 +10,22 @@ from django.shortcuts import get_object_or_404
 from django.core.exceptions import ValidationError
 
 
-def formdoar(request):
-    urldoar = reverse('paginas:index.html')
-
-
-class FormCadastro(TemplateView):
-    template_name = 'cadastrar/form.html'
-
-
 class DoadoresCreate(CreateView):
     template_name = 'cadastrar/doador.html'
     form_class = UsuarioForm
     success_url = reverse_lazy('paginas:home')
 
     def form_valid(self, form):
-        grupo = get_object_or_404(Group, name='Doadores')
+
+        grupo = get_object_or_404(Group, name='clientes')
+
         url = super().form_valid(form)
+
         self.object.groups.add(grupo)
         self.object.save()
-        Doadores.objects.create(username=self.object)
+
+        Doadores.objects.create(usarname=self.object)
+
         return url
 
     def get_context_data(self, *args, **kwargs):
@@ -41,7 +38,7 @@ class DoadoresCreate(CreateView):
 class DoacaoCreate(CreateView):
     model = Doacao
     fields = ['quantidade', 'descricao']
-    template_name = 'cadastrar/doacao.html'
+    template_name = 'cadastrar /doacao.html'
     success_url = reverse_lazy('paginas:home')
 
     def form_valid(self, form):

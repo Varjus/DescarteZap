@@ -37,6 +37,7 @@ class DoadoresCreate(CreateView):
         context['Botao'] = "Cadastrar"
         return context
 
+
 class DoacaoCreate(CreateView):
     model = Doacao
     fields = ['quantidade', 'descricao']
@@ -47,6 +48,7 @@ class DoacaoCreate(CreateView):
         form.instance.username = self.request.user
         url = super().form_valid(form)
         return url
+
 
 #################### UPDATE ########################
 
@@ -79,6 +81,7 @@ class DoadoresList(ListView):
     def get_queryset(self):
         self.object_list = Doadores.objects.filter(username=self.request.user)
         return self.object_list
+
 
 class DoacaoList(ListView, Doacao):
     model = Doacao

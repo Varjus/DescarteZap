@@ -16,14 +16,15 @@ class DoadoresCreate(CreateView):
     success_url = reverse_lazy('paginas:home')
 
     def form_valid(self, form):
-        # grupo = get_object_or_404(Group, name='clientes')
+
+        grupo = get_object_or_404(Group, name='Doadores')
 
         url = super().form_valid(form)
 
-        # self.object.groups.add(grupo)
-        # self.object.save()
+        self.object.groups.add(grupo)
+        self.object.save()
 
-        # Doadores.objects.create(usarname=self.object)
+        Doadores.objects.create(username=self.object)
 
         return url
 

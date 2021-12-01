@@ -19,23 +19,18 @@
       <div class="clr"></div>
       <div class="menu">
         <ul>
-          <li><a href="index.html" class="active"><span>NOSSA EMPRESA</span></a></li>
-          <li><a href="#"><span>SERVIÇOS</span></a></li>
-          <li><a href="#"><span>NATUREZA</span></a></li>
-          <li><a href="{% url 'paginas:home' %}" class="active"><span> CADASTRO DOAR </span></a></li>
-          <link href="{% url 'paginas:home' %}"></span></span></a></link>
-        </ul>
+          <li><a href="index.html" class="active" style="border:12px solid white" class="w3-painel w3-hover-border-green"><span>NOSSA EMPRESA</span></a></li>
+          <li><a href="{% url 'paginas:home' %}" class="active" style="border:12px solid white" class="w3-painel w3-hover-border-green"><span>CADASTRO DOAR</span></a></li>
+         </ul>
       </div>
-
-      <div class="search">/
+      <div class="search">
         <form id="form1" name="form1" method="post" action="">
           <label><span>
-            <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Pesquisa..." />
-             <a href="/accounts/logout/"> <span> Sair </span></a>
+            <a href="/accounts/logout/"> <span> Sair </span></a>
             <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_login' %}">
                             <i class="fa fa-sign-in" aria-hidden="true"></i>
-                        <span id="usarname">{{ request.user }} </span>
+                        <span id="username">{{ request.user }} </span>
                         </a>
                      </li>
           </span>
